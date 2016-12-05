@@ -103,7 +103,7 @@ for(x1 in 1:length(possibledmg[,1])){
       for(y2 in 1:length(possiblearmor[1,])){
         #check if we didn't use too many rings
         if(dmgcost.ring[x1,x2]+armorcost.ring[y1,y2]<=2){
-          #check if current cost is lower than previous success
+          #check if current cost is higher than previous failure
           if(dmgcost.coin[x1,x2]+armorcost.coin[y1,y2]>gold){
             Boss.stats.current <- Boss.stats
             Player.stats.current <- Player.stats+c(0,possibledmg[x1,x2],possiblearmor[y1,y2])
